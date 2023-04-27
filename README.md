@@ -1,5 +1,6 @@
 ### Front_End
 
 #### Homework
-- [Homework_25_04_2023](https://olegkarimov.github.io/Front_End/)
-- [Homework_27_04_2023](https://github.com/OlegKarimov/Front_End/blob/master/03_CSS_CoffeePosition_homework_27_04_2023/index.html)
+- [Homework_24_04_2023](https://github.com/OlegKarimov/Front_End/tree/master/01_HTML_homework_24_04_2023)
+- [Homework_25_04_2023](https://github.com/OlegKarimov/Front_End/tree/master/02_CSS_Coffe_homework_25_04_2023)
+- [Homework_27_04_2023](https://github.com/OlegKarimov/Front_End/tree/master/03_CSS_CoffeePosition_homework_27_04_2023)
