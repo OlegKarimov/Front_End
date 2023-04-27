@@ -33,9 +33,9 @@ h1 {
   position: relative;
 }
 
-.left, .right {
+.left, .right, .center {
 position: absolute;
-width: 48%;
+width: 31%;
 top: 15px;
 }
 
@@ -47,11 +47,15 @@ left: 15px;
 right: 15px;
 }
 
-.left > div, .right > div {
-margin: 100px 0;
+.center{
+left: 34.5%;
+}
+
+.left > div, .right > div, .center > div {
+margin: 50px 0;
 border-bottom: 1px solid #e4bb97; /* отступ по низу */
 padding-bottom: 60px;
-height: 150px;
+height: 220px;
 overflow-y: auto; /* полоса прокрутки по надобности*/
 }
 
