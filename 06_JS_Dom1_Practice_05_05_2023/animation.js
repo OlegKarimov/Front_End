@@ -44,8 +44,6 @@ function printTime() {
     newP.appendChild(newP2Text);
     div1.replaceChild(newP2Text, div1.firstElementChild);
 
-    div1.appendChild(newP);
-
 
     //TODO Дописать функцию printTime(), чтобы она
     // выводила на экран актуальное время
