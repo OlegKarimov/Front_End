@@ -130,14 +130,21 @@ function printArray(arr) {
         console.log(arr[i]);
     }
 }
+
 //----------------------------------------------------
 res = sumDigits(1234);
 console.log(`res = ${res}`); // res = 10;
 
+//----------------------------------------------------
 res = luckyNumber(1234321); //1 + 2 + 3 == 8 + 7 + 1;
 // res = luckyNumber(1234321); 1 + 2 + 3 == 3 + 2 + 1;
 console.log(res ? 'Lucky' : 'Unlucky');
 
+//-----------------------------------------------------
+
+let abc = banana();
+
+//-----------------------------------------------------
 function sumDigits(x) {
     let resSum = 0;
     while (x > 0){
@@ -146,6 +153,7 @@ function sumDigits(x) {
     }
     return resSum;
 }
+
 //----------------------------------------------------
 function luckyNumber(x) {
     const arr = [0];
@@ -170,14 +178,13 @@ function luckyNumber(x) {
                 } 
             }
         }
-        console.log(a);
-        console.log(b);
     return (a === b);
 }
+
 //----------------------------------------------------
 function banana() {
     let a = 'a';
     let b = 'b';
-    //TODO
+    console.log((b + a + + a + a).toLocaleLowerCase());
 }
 // 'b', 'a' => banana;
