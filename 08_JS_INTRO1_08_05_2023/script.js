@@ -150,6 +150,7 @@ function sumDigits(x) {
     while (x > 0){
         resSum += x % 10;
         x = parseInt(x / 10);
+        // x = (x - resSum)/10;
     }
     return resSum;
 }
