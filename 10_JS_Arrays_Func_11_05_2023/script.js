@@ -105,7 +105,7 @@ res = persons.map((p, i) => `${i+1}. Name: ${p.userName}, Age: ${p.age}`);
 console.log(res);
 
 res = persons.reduce((accum, item) => accum + item.age, 0);
-console.log(res);
+console.log(res); //Суммирует элементы в аккумулятор. Его начальное значение 0
 
 res = persons.sort((a, b) => a.age - b.age === 0 ? b.userName.length - a.userName.length : a.age - b.age);
 console.log(res);
