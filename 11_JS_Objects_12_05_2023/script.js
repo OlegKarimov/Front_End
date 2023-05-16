@@ -76,7 +76,9 @@ const shoppingCart = {
         if (existingItem) {
             existingItem.quantity += item.quantity;
         } else {
-            this.items.push(item);
+            if (item.name && item.price && item.quantity){
+                this.items.push(item);
+            }
         }
         this.updateTotalCoast();
     },
@@ -101,8 +103,23 @@ const shoppingCart = {
 // shoppingCart.removeItem('Beef');
 // console.log(shoppingCart.totalCost);
 
+
+const add = document.getElementById('add');
+const stats = document.getElementById('stats');
+const productList = document.getElementById('productList');
+const statsContainer = document.getElementById('statsContainer');
+
+
 add.onclick = addHandler;
 stats.onclick = statsHandler;
+
+// add.addEventListener('click',addHandler);
+add.addEventListener('keydown',(e) => {
+    if (e.key === "Enter"){
+        console.log("Hallo Enter");
+    }
+})
+
 
 function addHandler() {
 
@@ -130,12 +147,13 @@ function statsHandler() {
     // min price of product,
     // avg price of product
     function addLi(text, addElement){
-        const li = document.createElement('li');
-        li.textContent = `${text}: ${addElement}`;
-        productList.append(li);
+        const stats = document.createElement('div');
+        stats.textContent = `${text}: ${addElement}`;
+        productList.append(stats);
     } 
     if (shoppingCart.items.length) {
-        productList.innerHTML = '';
+        // productList.innerHTML = '';
+        addLi("","");
         const avgPrice = shoppingCart.items.reduce((total, el) => total + el.price, 0) / shoppingCart.items.length;
         addLi("Avg price of product",avgPrice);
         const minPrice = shoppingCart.items.sort((a, b) => a.price - b.price)[0].price;
@@ -149,10 +167,19 @@ function statsHandler() {
         const itemsQuantity = shoppingCart.items.length;
         addLi("Number of positions",itemsQuantity);
         // console.log(avgPrice);
-    // }
-    // productList.innerHTML = '';
-        
-    }
+
+        statsContainer.innerHTML = `
+        <p>Average Price: ${avgPrice % 1 ? avgPrice.toFixed(2) : avgPrice}</p>
+        <p>Min Price: ${minPrice % 1 ? minPrice.toFixed(2) : minPrice}</p>
+        <p>Max Price: ${maxPrice % 1 ? maxPrice.toFixed(2) : maxPrice}</p>
+        <p>Total Quantity: ${totalQuantity}</p>
+        <p>Total Cost: ${totalCoast % 1 ? totalCoast.toFixed(2) : totalCoast}</p>
+        <p>Number of Items: ${itemsQuantity}</p>
+    `;
+} else {
+    const statsContainer = document.getElementById('statsContainer');
+    statsContainer.innerHTML = 'The sopping cart is empty';
+}
     
     // const maxPrice = shoppingCart.items.sort((a, b) => a.price - b.price)[shoppingCart.items.length - 1].price;
 }
