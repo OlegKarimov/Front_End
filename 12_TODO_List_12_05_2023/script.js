@@ -13,6 +13,7 @@ taskListUl.addEventListener('click', (e) => {
 });
 
 
+
 function addTask() {
     const taskName = task.value.trim();
     if (taskName){
