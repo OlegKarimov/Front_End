@@ -3,34 +3,29 @@ const addTaskButton = document.getElementById('addTask');
 const taskListUl = document.getElementById('taskList');
 
 addTaskButton.addEventListener('click', addTask);
+addTaskButton.addEventListener('keydown', e => {
+    console.log(e.key);
+    if (e.key === 'Enter') {
+        addTask;
+    }
+});
 taskListUl.addEventListener('click', (e) => {
-    // console.log(e.target.tagName);
-    // console.log(e);
-    if (e.target.tagName === 'BUTTON'){
-        // console.log(e.target.parentElement);
+    if (e.target.tagName === 'BUTTON') {
         e.target.parentElement.remove();
+    }
+    if (e.target.checked) {
+        e.target.previousSibling.style.textDecoration = 'line-through black';
+    } else {
+        e.target.previousSibling.style.textDecoration = 'none';
     }
 });
 
-
-
 function addTask() {
     const taskName = task.value.trim();
-    if (taskName){
+    if (taskName) {
         const li = document.createElement('li');
-        li.innerHTML = `<span>${taskName}</span>
-                | Dunn:
-                <input type="checkbox" name="dunnCheck" id="dunnCheck" value="no"> | 
-                <button>Delete</button>`;
-
-        // li.style.textAlign = 'center';
+        li.innerHTML = `<span>${taskName}</span><input type="checkbox"><button>Delete</button>`;
         taskListUl.appendChild(li);
     }
     task.value = '';
 }
-
-
-taskListUl.dunnCheck.addEventListener('change',(e) => {
-    console.log(e);
-
-});
