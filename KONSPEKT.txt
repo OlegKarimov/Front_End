@@ -15,6 +15,11 @@
 
 Link lessons: https://us02web.zoom.us/my/cohort23ait
 
+React: npx create-react-app . --template typescript
+
+npx create-react-app my-app --template typescript
+
+-----------------------------------------------------------------------------
 Расписание
 https://docs.google.com/spreadsheets/d/1u7CvHQwUH2LAMiRRiuyrqqLFVIVMa70ZFj0j8C7CQh0/edit#gid=0
 
