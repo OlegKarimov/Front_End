@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#clickOn {
+  position: relative;
+  bottom: -20px;
+  height: 70px;
+}
+
+#weatherContainer {
+  background-color: #d4edf9;
+  color: rgb(182, 188, 194);
+  background-image: url("./img/gif1.gif");
+  background-size: cover;
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  padding-top: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+#city {
+  font-size: 5em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 800;
+  padding-bottom: 10px;
+  padding: 0 30px 10px 30px;
+}
+#temperature {
+  font-size: 4.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#windspeed {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#weatherDescr {
+  width: 98%;
+  margin-top: 30px;
+  font-family: "Caveat", cursive;
+  font-size: 4em;
+}
+
+img {
+  height: 50px;
+}
+.geo {
+  height: 50px;
+}
+.temp {
+  height: 45px;
+}
+.wind {
+  height: 70px;
+}
